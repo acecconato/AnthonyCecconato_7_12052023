@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
 title Get the list of products
 
@@ -8,3 +9,4 @@ API->>API: Verify json web token
 API->>Database: Get the list of products
 
 API-->>-Client: Return the list of products
+```

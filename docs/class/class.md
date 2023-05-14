@@ -1,3 +1,4 @@
+```mermaid
 classDiagram
 
 class User {
@@ -29,4 +30,5 @@ class Product {
 }
 
 User "1"*--"0..n" Customer
+```
 

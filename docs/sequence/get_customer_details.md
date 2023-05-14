@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
 title Get the details of a registered user linked to a customer
 
@@ -8,3 +9,4 @@ API->>API: Verify json web token
 API->>Database: Get the customer details
 
 API-->>-Client: Return the customer details
+```

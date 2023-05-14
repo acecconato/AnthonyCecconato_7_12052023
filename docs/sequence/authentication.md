@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
 title Stateless authentication with json web token
 
@@ -9,3 +10,4 @@ alt Token is valid
 else Token is invalid
     API-->>-Client: 403 Forbidden
 end
+```

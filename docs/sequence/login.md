@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
 title Generate login token
 
@@ -11,3 +12,4 @@ alt Correct credentials
 else Wrong credentials
     API-->>-Client: 401 Unauthorized
 end
+```

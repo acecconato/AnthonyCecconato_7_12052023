@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
 title Get the details of a registered user linked to a customer
 
@@ -9,3 +10,4 @@ API->>API: Validate datas sent
 API->>Database: Add a new customer
 
 API-->>-Client: 201 Created
+```
