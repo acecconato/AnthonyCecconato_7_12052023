@@ -1,13 +1,13 @@
 ```mermaid
 sequenceDiagram
-title Get the details of a registered user linked to a customer
+title Add a new user attached to a client
 
-Client->>+API: POST /users/{ulid}/customers
+Client->>+API: POST /clients/{ulid}/users
 
 API->>API: Verify json web token
 API->>API: Validate datas sent
 
-API->>Database: Add a new customer
+API->>Database: Store the created user
 
 API-->>-Client: 201 Created
 ```

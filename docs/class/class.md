@@ -1,23 +1,20 @@
 ```mermaid
 classDiagram
 
-class User {
+class Client {
     -Ulid id
     -String email
     -String password
-    -String|null plainPassword
-    
-    +addCustomer(): User
-    +deleteCustomer(Ulid id): void
+    -String plainPassword
 }
 
-class Customer {
+class User {
     -Ulid id
     -String username
     -String email
     -String url
-    -Datetime created_at
-    -Datetime|null updated_at
+    -Datetime createdAt
+    -Datetime|null updatedAt
 }
 
 class Product {
@@ -29,6 +26,6 @@ class Product {
     -Number price
 }
 
-User "1"*--"0..n" Customer
+Client "1"*--"0..n" User
 ```
 

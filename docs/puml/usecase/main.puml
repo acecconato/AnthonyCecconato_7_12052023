@@ -6,26 +6,19 @@ package "BileMo REST API" as api {
     usecase "Login"
     usecase "Get products list" as getProducts
     usecase "Get the details of a product" as getProduct
-    usecase "Get registered users linked to a customer" as getUsers
-    usecase "Get the details of a registered user linked to a customer" as getUser
-    usecase "Add a new user linked to a customer" as addUser
-    usecase "Delete a user linked to a customer" as deleteUser
-
-    getProducts ...> (Login): include
-    getProduct ...> (Login): include
-    getUsers ...> (Login): include
-    getUser ...> (Login): include
-    addUser ...> (Login): include
-    deleteUser ...> (Login): include
+    usecase "Get registered users linked to a client" as getUsers
+    usecase "Get the details of a registered user linked to a client" as getUser
+    usecase "Add a new user linked to a client" as addUser
+    usecase "Delete a user linked to a client" as deleteUser
 }
 
-:User: -- getProducts
-:User: -- getProduct
-:User: -- getUsers
-:User: -- getUser
-:User: -- addUser
-:User: -- deleteUser
-:User: -- Login
+:Client: -- getProducts
+:Client: -- getProduct
+:Client: -- getUsers
+:Client: -- getUser
+:Client: -- addUser
+:Client: -- deleteUser
+:Client: -- Login
 
 database Database <<system>>
 api --- Database
