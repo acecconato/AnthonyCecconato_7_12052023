@@ -5,7 +5,6 @@ class Client {
     -Ulid id
     -String email
     -String password
-    -String plainPassword
 }
 
 class User {
