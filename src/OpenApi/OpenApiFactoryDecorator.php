@@ -32,6 +32,7 @@ class OpenApiFactoryDecorator implements OpenApiFactoryInterface
 
         $operation = new Operation(
             operationId: 'refreshToken',
+            tags: ['Login Check'],
             responses: [
                 '200' => new Response(
                     description: 'Returns a new access token'
