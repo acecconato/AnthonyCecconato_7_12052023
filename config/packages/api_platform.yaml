@@ -2,8 +2,20 @@ api_platform:
   title: 'BileMo Api'
   version: '1.0'
   show_webby: false
+  formats:
+    json: [ 'application/json' ]
+    jsonhal: [ 'application/hal+json' ]
+    html: [ 'text/html' ]
   swagger:
     api_keys:
       JWT:
         name: Authorization
         type: header
+  http_cache:
+    public: false
+    invalidation:
+      enabled: true
+  defaults:
+    cache_headers:
+      max_age: 3600
+      vary: [ 'Content-Type', 'Authorization', 'Origin' ]
