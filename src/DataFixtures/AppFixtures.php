@@ -26,7 +26,7 @@ class AppFixtures extends Fixture
 
         /** @var Client[] $clients */
         $clients = [];
-        for ($i = 0; $i < 3; $i++) {
+        for ($i = 0; $i < 3; ++$i) {
             $client = new Client();
             $client
                 ->setEmail("demo$i@demo.fr")
@@ -36,14 +36,14 @@ class AppFixtures extends Fixture
             $clients[] = $client;
         }
 
-        for ($i=0; $i < 50; $i++) {
+        for ($i = 0; $i < 50; ++$i) {
             $user = new User();
             $user
                 ->setEmail($faker->email())
                 ->setUsername($faker->userName())
                 ->setcreatedAt(new \DateTimeImmutable());
 
-            if (rand(0, 1) === 1) {
+            if (1 === rand(0, 1)) {
                 $user->setUrl($faker->url());
             }
 
@@ -52,7 +52,7 @@ class AppFixtures extends Fixture
             $manager->persist($user);
         }
 
-        for ($i = 0; $i < 50; $i++) {
+        for ($i = 0; $i < 50; ++$i) {
             $manager->persist(
                 (new Product())
                     ->setName("Product n°$i")

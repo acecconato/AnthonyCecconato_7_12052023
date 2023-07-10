@@ -10,7 +10,6 @@ use ApiPlatform\OpenApi\Model\PathItem;
 use ApiPlatform\OpenApi\Model\RequestBody;
 use ApiPlatform\OpenApi\Model\Response;
 use ApiPlatform\OpenApi\OpenApi;
-use ArrayObject;
 use Symfony\Component\DependencyInjection\Attribute\AsDecorator;
 
 #[AsDecorator('api_platform.openapi.factory')]
@@ -23,8 +22,6 @@ class OpenApiFactoryDecorator implements OpenApiFactoryInterface
 
     /**
      * @param array<mixed> $context
-     *
-     * @return OpenApi
      */
     public function __invoke(array $context = []): OpenApi
     {
@@ -44,14 +41,14 @@ class OpenApiFactoryDecorator implements OpenApiFactoryInterface
             summary: 'Refresh Token',
             requestBody: new RequestBody(
                 description: 'Refresh token request',
-                content: new ArrayObject([
+                content: new \ArrayObject([
                     'application/json' => [
                         'schema' => [
                             'type' => 'object',
                             'properties' => [
-                                'refresh_token' => ['type' => 'string']
+                                'refresh_token' => ['type' => 'string'],
                             ],
-                            'required' => ['refresh_token']
+                            'required' => ['refresh_token'],
                         ],
                     ],
                 ]),

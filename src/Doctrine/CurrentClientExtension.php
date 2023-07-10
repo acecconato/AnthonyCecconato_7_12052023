@@ -22,13 +22,7 @@ class CurrentClientExtension implements QueryCollectionExtensionInterface, Query
     }
 
     /**
-     * @param \Doctrine\ORM\QueryBuilder $queryBuilder
-     * @param \ApiPlatform\Doctrine\Orm\Util\QueryNameGeneratorInterface $queryNameGenerator
-     * @param string $resourceClass
-     * @param \ApiPlatform\Metadata\Operation|null $operation
      * @param array<mixed> $context
-     *
-     * @return void
      */
     public function applyToCollection(
         QueryBuilder $queryBuilder,
@@ -41,14 +35,8 @@ class CurrentClientExtension implements QueryCollectionExtensionInterface, Query
     }
 
     /**
-     * @param \Doctrine\ORM\QueryBuilder $queryBuilder
-     * @param \ApiPlatform\Doctrine\Orm\Util\QueryNameGeneratorInterface $queryNameGenerator
-     * @param string $resourceClass
      * @param array<mixed> $identifiers
-     * @param \ApiPlatform\Metadata\Operation|null $operation
      * @param array<mixed> $context
-     *
-     * @return void
      */
     public function applyToItem(
         QueryBuilder $queryBuilder,

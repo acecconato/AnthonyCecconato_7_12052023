@@ -22,12 +22,8 @@ class UserStateProcessor implements ProcessorInterface
     }
 
     /**
-     * @param mixed $data
-     * @param Operation $operation
      * @param array<mixed> $uriVariables
      * @param array<mixed> $context
-     *
-     * @return mixed
      */
     public function process(mixed $data, Operation $operation, array $uriVariables = [], array $context = []): mixed
     {
@@ -38,7 +34,7 @@ class UserStateProcessor implements ProcessorInterface
         if ($data instanceof User && $operation instanceof Post) {
             $data->setcreatedAt(new \DateTimeImmutable());
 
-            if ($this->security->getUser() instanceof UserInterface === false) {
+            if (false === $this->security->getUser() instanceof UserInterface) {
                 throw new UserNotFoundException();
             }
 

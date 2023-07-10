@@ -61,7 +61,6 @@ class Client implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function eraseCredentials(): void
     {
-        //
     }
 
     public function getUserIdentifier(): string
