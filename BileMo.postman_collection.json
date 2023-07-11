@@ -1,0 +1,333 @@
+{
+	"info": {
+		"_postman_id": "c57a3c09-19ae-4729-869b-285aa1f12bf4",
+		"name": "BileMo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4497630",
+		"_collection_link": "https://www.postman.com/grey-meadow-512735/workspace/bilemo-anthony-cecconato/collection/4497630-c57a3c09-19ae-4729-869b-285aa1f12bf4?action=share&creator=4497630&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "Me",
+					"item": [
+						{
+							"name": "Read users collection",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$root}}/api/users",
+									"host": [
+										"{{$root}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read user details",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$root}}/api/users/:ulid",
+									"host": [
+										"{{$root}}"
+									],
+									"path": [
+										"api",
+										"users",
+										":ulid"
+									],
+									"variable": [
+										{
+											"key": "ulid",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create user",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"demo\",\n    \"email\": \"demo@demo.fr\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{$root}}/api/users",
+									"host": [
+										"{{$root}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update user",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"url\": \"https://google.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{$root}}/api/users/:ulid",
+									"host": [
+										"{{$root}}"
+									],
+									"path": [
+										"api",
+										"users",
+										":ulid"
+									],
+									"variable": [
+										{
+											"key": "ulid",
+											"value": "01H5361VYV9PGBN39HYGYZMJSD"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete user",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{$root}}/api/users/:ulid",
+									"host": [
+										"{{$root}}"
+									],
+									"path": [
+										"api",
+										"users",
+										":ulid"
+									],
+									"variable": [
+										{
+											"key": "ulid",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "Read products collection",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$root}}/api/products?page=1",
+									"host": [
+										"{{$root}}"
+									],
+									"path": [
+										"api",
+										"products"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read product details",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"accept": true
+								}
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/hal+json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$root}}/api/products/:ulid",
+									"host": [
+										"{{$root}}"
+									],
+									"path": [
+										"api",
+										"products",
+										":ulid"
+									],
+									"variable": [
+										{
+											"key": "ulid",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"demo0@demo.fr\",\n    \"password\": \"demo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{$root}}/auth",
+							"host": [
+								"{{$root}}"
+							],
+							"path": [
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"refresh_token\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{$root}}/auth/refresh",
+							"host": [
+								"{{$root}}"
+							],
+							"path": [
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
