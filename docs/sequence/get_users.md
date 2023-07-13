@@ -7,7 +7,7 @@ Client->>+API: GET /clients/{ulid}/users
 API->>API: Verify json web token
 
 API->>Database: Get the users linked to the user
-Database-->>API: Return users 
+Database-->>API: Return datas
 
-API-->>-Client: Return json containing the users
+API-->>-Client: Return users
 ```
