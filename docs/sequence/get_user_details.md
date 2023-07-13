@@ -2,7 +2,7 @@
 sequenceDiagram
 title Get the details of a registered user linked to a client
 
-Client->>+API: GET /clients/{ulid}/users/{user_ulid}
+Client->>+API: GET /users/{ulid}
 
 
 API->>API: Verify json web token

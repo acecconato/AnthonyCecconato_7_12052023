@@ -2,7 +2,7 @@
 sequenceDiagram
 title Delete a user
 
-Client->>+API: DELETE /clients/{ulid}/users/{user_ulid}
+Client->>+API: DELETE /users/{user_ulid}
 
 API->>API: Verify json web token
 

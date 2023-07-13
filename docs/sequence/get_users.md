@@ -2,7 +2,7 @@
 sequenceDiagram
 title Get users linked to a client
 
-Client->>+API: GET /clients/{ulid}/users
+Client->>+API: GET /users
 
 API->>API: Verify json web token
 
